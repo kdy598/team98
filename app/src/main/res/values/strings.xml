@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">team98
+        </string>
+    <string name="find_id_pwd">Find ID/PWD</string>
+    <string name="naver_login">NAVER LOGIN</string>
+    <string name="kakao_login">KAKAO LOGIN</string>
+    <string name="log_in_with">Log in with 단냥이</string>
+    <string name="pw">패스워드</string>
+    <string name="ㅑㅇ">아이디</string>
+</resources>
