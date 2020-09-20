@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Button btn_log = (Button)findViewById(R.id.button);
         Button btn_log_kakao = (Button)findViewById(R.id.button3);
         Button btn_log_naver = (Button)findViewById(R.id.button4);
+        Button btn_sign_up = (Button)findViewById(R.id.btn_signup);
 
         TextInput_ID = findViewById(R.id.login_ID);
         TextInput_PW = findViewById(R.id.login_PW);
@@ -36,12 +37,20 @@ public class MainActivity extends AppCompatActivity {
                 String id = TextInput_ID.getText().toString();
                 String pw = TextInput_PW.getText().toString();
 
-                Intent intent = new Intent(MainActivity.this,LoginResult.class);
+                Intent intent = new Intent(MainActivity.this,pagerview.class);
                 intent.putExtra("ID",id);
                 intent.putExtra("PW",pw);
                 startActivity(intent);
 
 
+            }
+        });
+        btn_sign_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this,LoginResult.class);
+                startActivity(intent);
             }
         });
     }
