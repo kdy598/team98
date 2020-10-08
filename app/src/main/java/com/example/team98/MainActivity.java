@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 String id = TextInput_ID.getText().toString();
                 String pw = TextInput_PW.getText().toString();
 
-                Intent intent = new Intent(MainActivity.this,pagerview.class);
+                Intent intent = new Intent(MainActivity.this,HomeActivity.class);
                 intent.putExtra("ID",id);
                 intent.putExtra("PW",pw);
                 startActivity(intent);

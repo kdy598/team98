@@ -12,16 +12,9 @@
         <ImageView
             android:id="@+id/imgBanner1"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="match_parent"
             android:background="@drawable/newface"
             android:contentDescription="@string/app_name" />
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="죽냥이"
-            android:textColorHighlight="@color/colorPrimary"></TextView>
 
     </LinearLayout>
 

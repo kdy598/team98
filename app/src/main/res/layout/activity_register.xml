@@ -45,7 +45,7 @@
 
                 <EditText
                     android:id="@+id/idText"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_weight="10"
@@ -68,7 +68,7 @@
                 android:padding="10dp"
                 android:inputType="textPassword"
                 android:layout_marginTop="16dp"
-                android:text=""
+
 
                 ></EditText>
 
@@ -84,17 +84,14 @@
                 android:layout_marginTop="16dp">
 
             </EditText>
-
             <EditText
                 android:id="@+id/name"
-                android:layout_width="match_parent"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:hint=" 이름"
                 android:padding="10dp"
-
-
                 />
 
             <TextView
@@ -134,8 +131,11 @@
                 android:id="@+id/pnum"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:hint="휴대폰 번호"/>
+                android:hint="핸드폰번호"
+                android:padding="10dp"
+               />
             <TextView
                 android:id="@+id/error_Text"
                 android:layout_width="280dp"

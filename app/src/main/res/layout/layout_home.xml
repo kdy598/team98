@@ -31,29 +31,32 @@
             android:layout_height="500dp"
             android:background="#FFFFFF"
             android:orientation="vertical"
-            tools:context=".MainActivity">
-
+            >
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnToggle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="가로로 슬라이드" />
+                android:text="98%" />
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewPager2"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/frameSize"
-                android:layout_weight="1"
-                android:orientation="horizontal" />
-            <me.relex.circleindicator.CircleIndicator3
-                android:id="@+id/indicator"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_gravity="bottom"/>
+                android:layout_height="match_parent">
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="#F0ECDD"/>
+                <me.relex.circleindicator.CircleIndicator3
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="20dp"
+                    app:ci_drawable="@drawable/black_radius" />
 
-
-
+            </FrameLayout>
 
         </LinearLayout>
 
@@ -75,33 +78,14 @@
                 android:layout_gravity="bottom"
                 android:background="@color/coral">
 
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Camera" />
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/navigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_gravity="start"
+                    app:menu="@menu/menu"
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
-                <Button
-                    android:id="@+id/button5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Home" />
-
-                <Button
-                    android:id="@+id/button6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="게시판" />
-
-                <Button
-                    android:id="@+id/button7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="My" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

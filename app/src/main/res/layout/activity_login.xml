@@ -70,27 +70,26 @@
         android:layout_marginBottom="16dp"
 
         android:background="@drawable/btn_kakao"
-        android:drawableLeft="@drawable/custom_kakao"
         android:drawablePadding="-45dp"
         android:inputType="textUri"
-        android:text="@string/kakao_login" />
-
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/bg_btn_blue"
-            android:drawableLeft="@drawable/custom_naver"
-            android:drawablePadding="-45dp"
-            android:text="@string/naver_login" />
+        android:text="@string/kakao_login"
+        />
+    <!--android:drawableLeft="@drawable/custom_kakao"-->
 
 
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_btn_blue"
+        android:drawableLeft="@drawable/custom_naver"
+        android:drawablePadding="-45dp"
+        android:text="@string/naver_login" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -105,7 +104,7 @@
             android:layout_weight="2"
             android:gravity="center"
             android:text="@string/find_id_pwd"
-            android:textSize="24sp" />
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/btn_signup"
