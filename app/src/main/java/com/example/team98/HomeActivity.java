@@ -2,6 +2,7 @@ package com.example.team98;
 
         import androidx.appcompat.app.AppCompatActivity;
 
+        import android.content.Intent;
         import android.os.Bundle;
 
         import androidx.annotation.NonNull;
@@ -68,6 +69,10 @@ public class HomeActivity extends AppCompatActivity {
                     menuItem.setIcon(R.drawable.ic_content_paste_black_24dp);    // 선택한 이미지 변경
                     menu.findItem(R.id.list).setIcon(R.drawable.ic_content_paste_black_24dp);
                     menu.findItem(R.id.home).setIcon(R.drawable.ic_content_paste_black_24dp);
+                    Intent intent = new Intent(HomeActivity.this,Catlistactivity.class);
+                    startActivity(intent);
+                    //액티비티 전환 애니메이션 설정하는 부분
+                    overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
                     break;
             }// switch()..
             return true;

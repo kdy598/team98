@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".Catlistactivity"></activity>
         <activity android:name=".LoginResult" />
         <activity android:name=".pagerview" />
         <activity android:name=".MainActivity">
