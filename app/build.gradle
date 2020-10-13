@@ -32,8 +32,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'me.relex:circleindicator:2.1.4'
     implementation 'com.android.support:design:29.0.0' // bottom navigation view
     implementation 'androidx.viewpager2:viewpager2:1.0.0-alpha04'
@@ -42,5 +40,11 @@ dependencies {
     // For control over item selection of both touch and mouse driven selection
     implementation "androidx.recyclerview:recyclerview-selection:1.1.0-rc02"// recyclerview
     implementation "androidx.cardview:cardview:1.0.0"// andriod cardview
+    implementation 'gun0912.ted:tedpermission:2.0.0'// 권한 허용을 위해
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+
+
 
 }

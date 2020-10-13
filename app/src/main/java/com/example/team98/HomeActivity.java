@@ -6,17 +6,12 @@ package com.example.team98;
         import android.os.Bundle;
 
         import androidx.annotation.NonNull;
-        import androidx.appcompat.app.AppCompatActivity;
         import androidx.fragment.app.Fragment;
-
-        import android.os.Bundle;
         import android.view.Menu;
         import android.view.MenuItem;
-
         import com.google.android.material.bottomnavigation.BottomNavigationView;
         import androidx.viewpager2.adapter.FragmentStateAdapter;
         import androidx.viewpager2.widget.ViewPager2;
-
         import me.relex.circleindicator.CircleIndicator3;
 
 public class HomeActivity extends AppCompatActivity {
@@ -56,6 +51,7 @@ public class HomeActivity extends AppCompatActivity {
                     menu.findItem(R.id.home).setIcon(R.drawable.ic_content_paste_black_24dp);
                     menu.findItem(R.id.user).setIcon(R.drawable.ic_content_paste_black_24dp);
                     getSupportFragmentManager().beginTransaction().replace(R.id.m2frame,fragment1).commitAllowingStateLoss();
+
                     break;
 
                 case R.id.home:
@@ -71,10 +67,21 @@ public class HomeActivity extends AppCompatActivity {
                     menu.findItem(R.id.home).setIcon(R.drawable.ic_content_paste_black_24dp);
                     Intent intent = new Intent(HomeActivity.this,Catlistactivity.class);
                     startActivity(intent);
+
                     //액티비티 전환 애니메이션 설정하는 부분
                     overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+
                     break;
+                case R.id.camera:
+                    menuItem.setIcon(R.drawable.ic_content_paste_black_24dp);    // 선택한 이미지 변경
+                    menu.findItem(R.id.list).setIcon(R.drawable.ic_content_paste_black_24dp);
+                    menu.findItem(R.id.home).setIcon(R.drawable.ic_content_paste_black_24dp);
+                    intent = new Intent(HomeActivity.this,CameraActivity.class);
+                    startActivity(intent);
+
+
             }// switch()..
+
             return true;
         }
     }// ItemSelectedListener class..
