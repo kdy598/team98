@@ -29,7 +29,7 @@ public class LoginResult extends AppCompatActivity
     EditText login_id,login_pw,check_pw,name,pnum;
     Button btn_regi,btn_cancel;
     Spinner year,birth;
-    String ps = "^[a-zA-Z0-9]*$.{5,10}";
+    String ps = "^[a-zA-Z0-9]*$.{5,10}"; // 한글 숫자 조합 5~10글자
 
 
 
