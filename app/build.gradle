@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -10,7 +11,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     compileOptions { //Invoke-customs are only supported starting with Android O (--min-api 26
@@ -29,8 +30,21 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.android.support:multidex:1.0.3'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    implementation 'com.google.firebase:firebase-analytics' //firebase 앱 분석
+    implementation 'com.google.firebase:firebase-core' //firebase 코어
+    implementation 'com.google.firebase:firebase-auth:19.4.0' //firebase 인증
+    implementation 'com.firebaseui:firebase-ui-auth:6.2.0' //firebase 인증추가
+    implementation 'com.github.bumptech.glide:glide:4.9.0' //glide 이미지 로딩
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0' //glide 이미지 로딩추가
+    implementation 'com.google.firebase:firebase-database:19.4.0' //real-time database
+    implementation 'com.google.firebase:firebase-storage:19.2.0' //cloud storage
+    implementation 'com.google.firebase:firebase-firestore:21.2.1' //cloud firestore
+
+
     testImplementation 'junit:junit:4.12'
     implementation 'me.relex:circleindicator:2.1.4'
     implementation 'com.android.support:design:29.0.0' // bottom navigation view

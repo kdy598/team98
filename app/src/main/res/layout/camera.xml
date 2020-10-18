@@ -19,14 +19,22 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         >
+
         <Button
             android:id="@+id/btn_capture"
-            android:layout_width="wrap_content"
+            android:layout_width="206dp"
             android:layout_height="wrap_content"
-            android:text ="촬영"
-            >
+            android:text="촬영">
 
         </Button>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="upload"
+            android:onClick="clickUpload"/>
 
     </LinearLayout>
     
