@@ -18,9 +18,7 @@ public class HomeActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     Menu menu;
-    FragmentStateAdapter pagerAdatper;
-    CircleIndicator3 mIndicator;
-    ViewPager2 viewPager2;
+
 
 
     Fragment fragment1,fragment2;
@@ -47,35 +45,43 @@ public class HomeActivity extends AppCompatActivity {
             switch(menuItem.getItemId())
             {
                 case R.id.list:
-                    menuItem.setIcon(R.drawable.ic_content_paste_black_24dp);    // 선택한 이미지 변경
-                    menu.findItem(R.id.home).setIcon(R.drawable.ic_content_paste_black_24dp);
+                    menuItem.setIcon(R.drawable.ic_list_24px);    // 선택한 이미지 변경
+                    menu.findItem(R.id.home).setIcon(R.drawable.ic_home_24px);
                     menu.findItem(R.id.user).setIcon(R.drawable.ic_content_paste_black_24dp);
-                    getSupportFragmentManager().beginTransaction().replace(R.id.m2frame,fragment1).commitAllowingStateLoss();
+                    menu.findItem(R.id.camera).setIcon(R.drawable.ic_camera_alt_24px);
+                    menu.findItem(R.id.gps).setIcon(R.drawable.ic_place_24px);
+                    Intent intent = new Intent(HomeActivity.this,Catlistactivity.class);
+                    startActivity(intent);
+
 
                     break;
 
                 case R.id.home:
-                    menuItem.setIcon(R.drawable.ic_content_paste_black_24dp);    // 선택한 이미지 변경
-                    menu.findItem(R.id.list).setIcon(R.drawable.ic_content_paste_black_24dp);
+                    menuItem.setIcon(R.drawable.ic_home_24px);    // 선택한 이미지 변경
+                    menu.findItem(R.id.list).setIcon(R.drawable.ic_list_24px);
                     menu.findItem(R.id.user).setIcon(R.drawable.ic_content_paste_black_24dp);
+                    menu.findItem(R.id.camera).setIcon(R.drawable.ic_camera_alt_24px);
+                    menu.findItem(R.id.gps).setIcon(R.drawable.ic_place_24px);
                     getSupportFragmentManager().beginTransaction().replace(R.id.m2frame,fragment2).commitAllowingStateLoss();
                     break;
 
                 case R.id.user:
                     menuItem.setIcon(R.drawable.ic_content_paste_black_24dp);    // 선택한 이미지 변경
-                    menu.findItem(R.id.list).setIcon(R.drawable.ic_content_paste_black_24dp);
-                    menu.findItem(R.id.home).setIcon(R.drawable.ic_content_paste_black_24dp);
-                    Intent intent = new Intent(HomeActivity.this,Catlistactivity.class);
-                    startActivity(intent);
+                    menu.findItem(R.id.list).setIcon(R.drawable.ic_list_24px);
+                    menu.findItem(R.id.home).setIcon(R.drawable.ic_home_24px);
+                    menu.findItem(R.id.camera).setIcon(R.drawable.ic_camera_alt_24px);
+                    menu.findItem(R.id.gps).setIcon(R.drawable.ic_place_24px);
+                    getSupportFragmentManager().beginTransaction().replace(R.id.m2frame,fragment1).commitAllowingStateLoss();
 
                     //액티비티 전환 애니메이션 설정하는 부분
                     overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
 
                     break;
                 case R.id.camera:
-                    menuItem.setIcon(R.drawable.ic_content_paste_black_24dp);    // 선택한 이미지 변경
-                    menu.findItem(R.id.list).setIcon(R.drawable.ic_content_paste_black_24dp);
-                    menu.findItem(R.id.home).setIcon(R.drawable.ic_content_paste_black_24dp);
+                    menuItem.setIcon(R.drawable.ic_camera_alt_24px);    // 선택한 이미지 변경
+                    menu.findItem(R.id.list).setIcon(R.drawable.ic_list_24px);
+                    menu.findItem(R.id.home).setIcon(R.drawable.ic_home_24px);
+                    menu.findItem(R.id.gps).setIcon(R.drawable.ic_place_24px);
                     intent = new Intent(HomeActivity.this,CameraActivity.class);
                     startActivity(intent);
 
