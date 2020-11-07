@@ -34,8 +34,14 @@
         <item>미디어센터</item>
         <item>미디어센터</item>
         <item>기숙사</item>
-
-
+    </string-array>
+    <string-array name="cat_feature">
+        <item>치즈 고양이, 치즈색</item>
+        <item>입 주변에 노란 털이 있음 </item>
+        <item>통통함</item>
+        <item> 검,노,흰 삼색고양이</item>
+        <item> 바둑돌처럼 흑색,백색이 섞여있음</item>
+        <item> 사람을 잘 따름 </item>
     </string-array>
 
 </resources>
