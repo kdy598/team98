@@ -1,17 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="131dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/test"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="test" />
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
+
         <ImageView
             android:id="@+id/iv_result"
             android:layout_width="match_parent"
             android:layout_height="match_parent"></ImageView>
+
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -29,7 +46,15 @@
         </Button>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/popup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="clicked"
+            android:text="popup" />
+
+        <Button
+            android:id="@+id/clickUpload"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -37,5 +62,5 @@
             android:onClick="clickUpload"/>
 
     </LinearLayout>
-    
+
 </LinearLayout>
